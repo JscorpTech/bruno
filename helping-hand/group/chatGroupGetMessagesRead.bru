@@ -1,0 +1,19 @@
+meta {
+  name: chatGroupGetMessagesRead
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{baseUrl}}/chat/group/:id/read-message/2/
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{token}}
+}

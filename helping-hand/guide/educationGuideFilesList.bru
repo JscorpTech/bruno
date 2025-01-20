@@ -1,0 +1,22 @@
+meta {
+  name: educationGuideFilesList
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/education/guide/files/
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~guide_type: 
+  ~page: 
+  ~page_size: 
+  ~search: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

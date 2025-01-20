@@ -1,0 +1,30 @@
+meta {
+  name: newsPostUpdate
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{baseUrl}}/news/post/:id/
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "id": "",
+    "title": "",
+    "content": "",
+    "image": "",
+    "created_at": "",
+    "updated_at": ""
+  }
+}

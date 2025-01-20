@@ -1,0 +1,20 @@
+meta {
+  name: apiV2PostList
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/v2/post/
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~page: 
+  ~page_size: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

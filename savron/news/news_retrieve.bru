@@ -1,0 +1,19 @@
+meta {
+  name: news_retrieve
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/news/:id/
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

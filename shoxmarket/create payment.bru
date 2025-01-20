@@ -1,0 +1,19 @@
+meta {
+  name: create payment
+  type: http
+  seq: 6
+}
+
+get {
+  url: {{domain}}/payment-mobile?order_id=100048&customer_id=7&payment_platform=web&payment_method=payme&callback=null
+  body: none
+  auth: none
+}
+
+params:query {
+  order_id: 100048
+  customer_id: 7
+  payment_platform: web
+  payment_method: payme
+  callback: null
+}

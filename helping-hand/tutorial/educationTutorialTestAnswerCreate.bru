@@ -1,0 +1,33 @@
+meta {
+  name: educationTutorialTestAnswerCreate
+  type: http
+  seq: 10
+}
+
+post {
+  url: {{baseUrl}}/education/tutorial/:id/test-answer/
+  body: json
+  auth: bearer
+}
+
+params:query {
+  ~search: 
+}
+
+params:path {
+  id: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  [
+    {
+      "question": "",
+      "variant": [],
+      "any": ""
+    }
+  ]
+}

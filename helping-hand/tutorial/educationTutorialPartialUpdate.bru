@@ -1,0 +1,38 @@
+meta {
+  name: educationTutorialPartialUpdate
+  type: http
+  seq: 5
+}
+
+patch {
+  url: {{baseUrl}}/education/tutorial/:id/
+  body: json
+  auth: bearer
+}
+
+params:query {
+  ~search: 
+}
+
+params:path {
+  id: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "id": "",
+    "name": "",
+    "desc": "",
+    "image": "",
+    "file": "",
+    "video": "",
+    "test": "",
+    "tags": "",
+    "position": "",
+    "source": ""
+  }
+}

@@ -1,0 +1,60 @@
+meta {
+  name: Checkout
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{domain}}/api/checkout
+  body: json
+  auth: bearer
+}
+
+headers {
+  Accept-Language: uz
+  X-Requested-With: XMLHttpRequest
+  ~Authorization: Barier {token}
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "type": "ready_solutions",
+    "delivery_type": "pickup", // pickup | delivery
+    "client_type": "physical", // physical || legal
+    "branch_id": 1,
+    "client_information": {
+      "full_name": "Azamov Samandar",
+      "director_full_name": "Ozodbek Juraev",
+      "company_name": "Vortex",
+      "inn": "123124124",
+      "bank_name": "OFB",
+      "mfo": "2342334",
+      "oked": "533462352",
+      "payment_account": "12363543532",
+      "address": "Sebzor",
+      "email": "vortex@gmail.com",
+      "phone": 998913333111,
+      "jshir": 12345678901234, // new line type integer require if person type physical
+      "series": "AD1555325" // new line type stringrequire if person type physical
+    },
+    "address": {
+      "city_id": 1,
+      "address": "Inno Tenchno park",
+      "home": 219,
+      "landmark": "IBR PETROL"
+    },
+    "with_installation": true,
+    "payment_type": "cash", // cash | bank
+    "with_didox": true,
+    "products": [
+      {
+        "id": {{product_id}},
+        "count": 1
+      }
+    ]
+  }
+}

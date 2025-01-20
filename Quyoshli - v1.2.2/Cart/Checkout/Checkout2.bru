@@ -1,0 +1,49 @@
+meta {
+  name: Checkout2
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{domain}}/api/checkout
+  body: json
+  auth: bearer
+}
+
+headers {
+  Accept-Language: uz
+  X-Requested-With: XMLHttpRequest
+  ~Authorization: Barier {token}
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "type": "ready_solutions",
+    "delivery_type": "delivery",
+    "client_type": "physical",
+    "client_information": {
+      "full_name": "Imyaa Fama Tvoa",
+      "phone": 998999400049,
+      "jshir": 98327429384983,
+      "series": "AA3240923"
+    },
+    "address": {
+      "city_id": 1,
+      "address": "Inno Tenchno park",
+      "home": 219,
+      "landmark": "IBR PETROL"
+    },
+    "with_installation": false,
+    "payment_type": "cash",
+    "products": [
+      {
+        "id": 410,
+        "count": 1
+      }
+    ]
+  }
+}

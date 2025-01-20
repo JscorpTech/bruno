@@ -1,0 +1,21 @@
+meta {
+  name: educationTutorialListProgress
+  type: http
+  seq: 13
+}
+
+get {
+  url: {{baseUrl}}/education/tutorial/progress/
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~page: 
+  ~page_size: 
+  ~search: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,23 @@
+meta {
+  name: educationTutorialTestRetrieve
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{baseUrl}}/education/tutorial/:id/test/
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~search: 
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{token}}
+}

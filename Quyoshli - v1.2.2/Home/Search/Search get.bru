@@ -1,0 +1,19 @@
+meta {
+  name: Search get
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{domain}}/api/search?query=ProductName
+  body: none
+  auth: none
+}
+
+params:query {
+  query: ProductName
+}
+
+headers {
+  Accept-Language: ru
+}

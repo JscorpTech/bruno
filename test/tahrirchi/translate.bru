@@ -1,0 +1,41 @@
+meta {
+  name: translate
+  type: http
+  seq: 2
+}
+
+post {
+  url: https://websocket.tahrirchi.uz/handle-batch
+  body: json
+  auth: bearer
+}
+
+headers {
+  Accept: application/json, text/plain, */*
+  Accept-Language: uz,en-US;q=0.9,en;q=0.8,ru;q=0.7
+  Connection: keep-alive
+  Content-Type: application/json
+  Origin: https://tahrirchi.uz
+  Referer: https://tahrirchi.uz/
+  Sec-Fetch-Dest: empty
+  Sec-Fetch-Mode: cors
+  Sec-Fetch-Site: same-site
+  User-Agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+  sec-ch-ua: "Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"
+  sec-ch-ua-mobile: ?0
+  sec-ch-ua-platform: "Linux"
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE3MzE3MzcyODMsImlhdCI6MTczMTEzMjQ4Mywic3ViIjoiNTEwNzk5NWItM2M5Yy00NjYyLThmZGEtNGQ3M2I1NjhmMmEzIiwidHNpZCI6IiIsInR5cGUiOi0xfQ.e-vgYC31019zKCETVK1_YKw2QP_hcNx5vLpD8JxPcL8
+}
+
+body:json {
+  {
+    "jobs": [{
+      "text": "salom"
+    }],
+    "source_lang": "uzn_Latn",
+    "target_lang": "rus_Cyrl"
+  }
+}

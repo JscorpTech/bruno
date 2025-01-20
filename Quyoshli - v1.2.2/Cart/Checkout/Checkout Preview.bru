@@ -1,0 +1,38 @@
+meta {
+  name: Checkout Preview
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{domain}}/api/checkout-preview
+  body: json
+  auth: bearer
+}
+
+headers {
+  Accept-Language: {{language}}
+  X-Requested-With: XMLHttpRequest
+  ~Authorization: Barier {token}
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+      "type": "ready_solutions",
+      "city_id": 1,
+      "products": [
+          {
+              "id": 710,
+              "count": 2
+          },
+          {
+              "id": 2,
+              "count": 4
+          }
+      ]
+  }
+}

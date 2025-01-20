@@ -1,0 +1,19 @@
+meta {
+  name: apiV2CategoryRetrieve
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/api/v2/category/:id/
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

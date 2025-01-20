@@ -1,0 +1,23 @@
+meta {
+  name: image generate
+  type: http
+  seq: 12
+}
+
+post {
+  url: http://localhost:1337/v1/images/generate
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "prompt": "Here's a prompt you can use to generate an image of a cat and dog playing with a mouse:\n\n\"Create a whimsical scene featuring a playful cat and a friendly dog joyfully playing with a small mouse in a sunny garden. The cat should have fluffy fur and a mischievous expression, while the dog is cheerful with a wagging tail. The mouse is curious and brave, as they all interact in a lively and colorful setting filled with vibrant flowers and greenery.\"",
+    "model": "flux",
+    "response_format": "url"
+  }
+}

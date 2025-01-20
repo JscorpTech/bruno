@@ -1,0 +1,15 @@
+meta {
+  name: Order show
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{domain}}/api/user/orders/544/
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

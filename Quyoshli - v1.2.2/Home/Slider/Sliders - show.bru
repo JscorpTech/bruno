@@ -1,0 +1,15 @@
+meta {
+  name: Sliders - show
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{domain}}/api/sliders/{{slider_id}}
+  body: none
+  auth: none
+}
+
+headers {
+  Accept-Language: {{language}}
+}

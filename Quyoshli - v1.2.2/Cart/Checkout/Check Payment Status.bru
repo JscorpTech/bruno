@@ -1,0 +1,15 @@
+meta {
+  name: Check Payment Status
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{domain}}/api/order/{{order_id}}/payment-check-status/
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

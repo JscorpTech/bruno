@@ -1,0 +1,26 @@
+meta {
+  name: Store partnership
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{domain}}/api/partners
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+      "partner_id": 1,
+      "price": 1000,
+      "city_id": 1,
+      "comment": "Tezroq kerak",
+      "phone": "998913333111",
+      "full_name": "Tukhtaev U.T"
+  }
+}

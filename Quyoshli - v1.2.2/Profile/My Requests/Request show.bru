@@ -1,0 +1,15 @@
+meta {
+  name: Request show
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{domain}}/api/user/requests/{{request_id}}
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

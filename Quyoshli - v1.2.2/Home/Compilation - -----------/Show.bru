@@ -1,0 +1,16 @@
+meta {
+  name: Show
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{domain}}/api/compilations/1
+  body: none
+  auth: none
+}
+
+headers {
+  Accept-Language: {{language}}
+  X-Application-Token: {{local_token}}
+}

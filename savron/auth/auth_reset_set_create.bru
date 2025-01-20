@@ -1,0 +1,22 @@
+meta {
+  name: auth_reset_set_create
+  type: http
+  seq: 10
+}
+
+post {
+  url: {{baseUrl}}/auth/reset/set/
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "password": "",
+    "token": ""
+  }
+}

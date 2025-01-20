@@ -1,0 +1,20 @@
+meta {
+  name: Store favorite
+  type: http
+  seq: 2
+}
+
+get {
+  url: localhost:9005/api/products/1/favorites
+  body: json
+  auth: bearer
+}
+
+headers {
+  X-Application-Token: {{local_token}}
+  Accept-Language: {{language}}
+}
+
+auth:bearer {
+  token: {{token}}
+}

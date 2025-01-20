@@ -1,0 +1,15 @@
+meta {
+  name: Policy
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{domain}}/api/page/policy
+  body: none
+  auth: none
+}
+
+headers {
+  Accept-Language: {{language}}
+}

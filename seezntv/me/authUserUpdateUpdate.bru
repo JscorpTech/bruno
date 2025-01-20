@@ -1,0 +1,22 @@
+meta {
+  name: authUserUpdateUpdate
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{baseUrl}}/auth/user-update/
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "first_name": "Samandar",
+    "last_name": "Azamov"
+  }
+}

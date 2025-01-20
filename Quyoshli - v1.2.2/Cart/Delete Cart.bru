@@ -1,0 +1,15 @@
+meta {
+  name: Delete Cart
+  type: http
+  seq: 3
+}
+
+delete {
+  url: {{domain}}/api/cart/{{cart_id}}
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

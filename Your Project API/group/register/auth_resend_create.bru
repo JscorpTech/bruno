@@ -1,0 +1,21 @@
+meta {
+  name: auth_resend_create
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/auth/resend/
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "phone": ""
+  }
+}

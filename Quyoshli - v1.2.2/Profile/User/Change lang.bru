@@ -1,0 +1,21 @@
+meta {
+  name: Change lang
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{domain}}/api/user/language
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+      "language": "uz"
+  }
+}

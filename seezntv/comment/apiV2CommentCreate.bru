@@ -1,0 +1,23 @@
+meta {
+  name: apiV2CommentCreate
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/api/v2/comment/
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "text": "test",
+    "content": 10,
+    "parent": 76
+  }
+}

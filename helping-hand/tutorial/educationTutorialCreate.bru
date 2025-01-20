@@ -1,0 +1,43 @@
+meta {
+  name: educationTutorialCreate
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/education/tutorial/
+  body: multipartForm
+  auth: bearer
+}
+
+params:query {
+  ~search: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "name": "Test",
+    "desc": "sdfdsfds",
+    "image": "",
+    "file": "",
+    "video": "",
+    "test": "",
+    "tags": "",
+    "position": "",
+    "source": ""
+  }
+}
+
+body:multipart-form {
+  name_uz: desc
+  desc_uz: salom
+  : 
+  image: @file(/home/user/Pictures/Screenshots/Screenshot from 2024-12-23 14-03-58.png)
+  tags: salom
+  tags: salom2
+  source: https://google.com
+}

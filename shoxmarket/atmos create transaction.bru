@@ -1,0 +1,36 @@
+meta {
+  name: atmos create transaction
+  type: http
+  seq: 10
+}
+
+get {
+  url: {{domain}}/payment-mobile?order_id=100031&customer_id=7&payment_platform=web&callback=https://shox.uz/profile?page=my-orders&payment_method=atmospay
+  body: none
+  auth: none
+}
+
+params:query {
+  order_id: 100031
+  customer_id: 7
+  payment_platform: web
+  callback: https://shox.uz/profile?page=my-orders
+  payment_method: atmospay
+}
+
+headers {
+  accept: text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7
+  accept-language: en-US,en;q=0.9,uz;q=0.8,ru;q=0.7
+  cookie: XSRF-TOKEN=eyJpdiI6IlpwQnV3czhpeW84MngzZW5xcTFsS0E9PSIsInZhbHVlIjoiaUt6MHhvOWFyTlljd0VtbG1SL2IxdW5zbkRDbFhzQ0JnYzREU0tjOTl0YzY2MFY4dEdCUFVwa1JpLzBIRFRRK0xIL05wdjNMMGNPY0E2ei9uaHE1SHRNRVhMOGxLeHc5VWlSMHp2NzB5WW03YUF3a0cwbkg4ZWNyNnJ4aFhaY1ciLCJtYWMiOiIyZGQ1MDQ1ZmM2YWFkODViZTgwMzdmZDQ5NmQ1NjJiOGQ1YzYxMmUwNWQ5NGQ0Y2I3YzdhYWQ1M2RkMmM2MWU4IiwidGFnIjoiIn0%3D; 6ammart1730976678app_envlive_session=eyJpdiI6IkRVT0F4NEpEYmdrVEM4T2ZkaGFkUXc9PSIsInZhbHVlIjoiZkZzSktmZnZDREhvMGtYc3d4d0ZMYXAyUDV1QWV3enRWVmROamR0WHd0YXQ4VmI0R2ZlNEk3RmlLRTE2SmMyL1VZYmtkSXRjc25VeDJwYmxWSm9jRTRHY2VVZTdaemxoUkFrTWQzb3FBb1FLNHBtVjRrdUJMenJLU2FFQTBoWUIiLCJtYWMiOiI4MmVhNGE1OGZjMTkzZGJmMGFhYTAwOWM4NGU5YTg5ODJhNWJhZDliYTBlNGFlMjlmMGM4NmIzMWU1NTc5OGYxIiwidGFnIjoiIn0%3D
+  priority: u=0, i
+  referer: https://shox.uz/
+  sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
+  sec-ch-ua-mobile: ?0
+  sec-ch-ua-platform: "Linux"
+  sec-fetch-dest: document
+  sec-fetch-mode: navigate
+  sec-fetch-site: same-site
+  sec-fetch-user: ?1
+  upgrade-insecure-requests: 1
+  user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+}

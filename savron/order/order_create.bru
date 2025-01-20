@@ -1,0 +1,27 @@
+meta {
+  name: order_create
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/order/
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "id": "",
+    "categories": [],
+    "amount": "",
+    "start_day": "",
+    "end_day": "",
+    "payment_method": "",
+    "is_paid": ""
+  }
+}

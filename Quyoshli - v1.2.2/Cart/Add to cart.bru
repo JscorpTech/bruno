@@ -1,0 +1,26 @@
+meta {
+  name: Add to cart
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{domain}}/api/cart
+  body: json
+  auth: bearer
+}
+
+headers {
+  Accept-Language: {{language}}
+  X-Application-Token: {{local_token}}
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+      "product_id": 710
+  }
+}

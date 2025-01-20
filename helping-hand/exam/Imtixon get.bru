@@ -1,0 +1,30 @@
+meta {
+  name: Imtixon get
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/education/exam/
+  body: json
+  auth: bearer
+}
+
+params:query {
+  ~page: 
+  ~page_size: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  [
+    {
+      "question": "",
+      "variant": [],
+      "any": ""
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+meta {
+  name: authUserUpdatePartialUpdate
+  type: http
+  seq: 3
+}
+
+patch {
+  url: {{baseUrl}}/auth/user-update/
+  body: multipartForm
+  auth: bearer
+}
+
+params:query {
+  : 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "experience": 1
+  }
+}
+
+body:multipart-form {
+  experience: 1 @contentType(application/json)
+  level: 100
+}

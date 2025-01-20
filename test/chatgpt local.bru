@@ -1,0 +1,28 @@
+meta {
+  name: chatgpt local
+  type: http
+  seq: 11
+}
+
+post {
+  url: http://localhost:1337/v1/chat/completions
+  body: json
+  auth: none
+}
+
+headers {
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "Hi"
+      }
+    ],
+    "provider": "Blackbox",
+    "model": "gpt-4o-mini"
+  }
+}

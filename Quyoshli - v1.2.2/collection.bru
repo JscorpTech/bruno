@@ -1,0 +1,13 @@
+auth {
+  mode: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+vars:pre-request {
+  domain: http://127.0.0.1:9005
+  language: uz
+  brand_id: 1
+}

@@ -1,0 +1,21 @@
+meta {
+  name: request
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/sos/request/
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "area": "dangerous"
+  }
+}

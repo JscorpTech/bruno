@@ -1,0 +1,30 @@
+meta {
+  name: quizzes_commentaries_create
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/quizzes/:quiz_pk/commentaries/
+  body: json
+  auth: bearer
+}
+
+params:path {
+  quiz_pk: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "id": "",
+    "quiz": "",
+    "user": "",
+    "text": "",
+    "is_publish": "",
+    "created_at": ""
+  }
+}

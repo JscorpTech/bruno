@@ -1,0 +1,15 @@
+meta {
+  name: rating_retrieve
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/rating/
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

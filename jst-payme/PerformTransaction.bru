@@ -1,0 +1,26 @@
+meta {
+  name: PerformTransaction
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{domain}}/payment/payme/merchant/
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: Basic {{token}}
+}
+
+body:json {
+  {
+      "jsonrpc": "2.0",
+      "id": 166164,
+      "method": "PerformTransaction",
+      "params": {
+          "id": "673e2fe73c36bef9a1918a9f"
+      }
+  }
+}

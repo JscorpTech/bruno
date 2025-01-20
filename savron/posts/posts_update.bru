@@ -1,0 +1,27 @@
+meta {
+  name: posts_update
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{baseUrl}}/posts/:id/
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "title": "",
+    "desc": "",
+    "image": ""
+  }
+}

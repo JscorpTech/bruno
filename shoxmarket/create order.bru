@@ -1,0 +1,68 @@
+meta {
+  name: create order
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{domain}}/api/v1/customer/order/place
+  body: json
+  auth: none
+}
+
+headers {
+  accept: application/json
+  accept-language: en-US,en;q=0.9,uz;q=0.8,ru;q=0.7
+  authorization: Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIzIiwianRpIjoiOTYwNmY3NmE5YTU4YmFhZWU1MWYyZGY2Nzk3MDFlOTdjNzZmMzJhOTBhM2JhODliYzM5MWVhMGE2NGExODg5ZmEwOWRiMzQ5MmI3ZjA1NjYiLCJpYXQiOjE3MzE2ODY3MTIuMzI1MDMsIm5iZiI6MTczMTY4NjcxMi4zMjUwMzYsImV4cCI6MTc2MzIyMjcxMi4yOTcxMTgsInN1YiI6IjciLCJzY29wZXMiOltdfQ.tRn6jyoLoVuvWTu51aoxhVnDictYzcDXrP3WzkL70iJ4NSAw5OxBSA2nHFqQHGQtRMCb5N021z7FbaS7fIMRauZV_Kf5HqnJo_SKtbM_FsiHTbkZLYtMH-Ku0QYxVDYqh0G1JZ6XxuqWhFKydBtso-8JJ0Q75FfnepiSGYxFv8JLHWEyK_Z2jR9IeIGwpfJ5x129h3J_vZHuKej2ZIKd9QJhFMPOjAnR4ZNyJ1tCdQFyiDO6CObMzLixrGfp52F0gms_D920-X1dqX359DR6A5SF4BoCCQz6C2C42_yypoGPYECzRXfvlEP-GDJkDoUxe-ZzHLr1d6YPjovOY7DtgAJH0Zoqdih3-0dtSleWSE3XAhyJZSMunmZO3ManWVHPF52eOxLjPWRH6DTgzPcAQJCywG5pPAa-aliomLfpfNyL2Hn0uvt2Zm0vxDqiJMKuIA-b4uMG0BzkQ_q-HVO4fQ6sm7bdfjUUma-uJ-X4_rSgzHTeLFQufkLqaGLPaSVvcxU4w_hR_9ipwSrfN1AIKZGzAFAanjpDBARwqpAJdo0gNOwuet7O2pjg6Ecf5_yyD4vgFmku1qg57QT9NSeSxyHWxkgbxhnCtH1P8gPtQJUngMq7dHz5Of1UMYRaqIGOhS-5UFLouusW0I8JGzMzCsqgzd6uvQWSTEfKL3jDm-8
+  content-type: application/json
+  latitude: 41.3565336
+  longitude: 60.8566686
+  moduleid: 1
+  origin: https://shox.uz
+  priority: u=1, i
+  referer: https://shox.uz/
+  sec-ch-ua: "Chromium";v="130", "Google Chrome";v="130", "Not?A_Brand";v="99"
+  sec-ch-ua-mobile: ?0
+  sec-ch-ua-platform: "Linux"
+  sec-fetch-dest: empty
+  sec-fetch-mode: cors
+  sec-fetch-site: same-site
+  user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/130.0.0.0 Safari/537.36
+  x-localization: uz
+  x-software-id: 33571750
+  zoneid: [2,3,2,4]
+}
+
+body:json {
+  {
+    "cart": "[{\"add_on_ids\":[],\"add_on_qtys\":[],\"add_ons\":[],\"item_id\":5,\"item_campaign_id\":null,\"item_type\":\"AppModelsItem\",\"price\":15000,\"quantity\":1,\"variant\":[],\"variation\":[]}]",
+    "lat": 41.3565336,
+    "lng": 60.8566686,
+    "latitude": 41.3565336,
+    "longitude": 60.8566686,
+    "address": "9V44+JM Bagat, Uzbekistan",
+    "address_type": "Selected Address",
+    "is_buy_now": 1,
+    "partial_payment": false,
+    "schedule_at": null,
+    "payment_method": "digital_payment",
+    "order_type": "delivery",
+    "store_id": 2,
+    "discount_amount": 0,
+    "distance": 27.817,
+    "order_amount": 15000,
+    "dm_tips": 0,
+    "cutlery": 0,
+    "unavailable_item_note": null,
+    "delivery_instruction": null,
+    "guest_id": "",
+    "contact_person_number": "+998943990509",
+    "extra_packaging_amount": 0,
+    "create_new_user": 0,
+    "password": "",
+    "is_guest": 0,
+    "guest_id":1,
+    "contact_person_name": "salom",
+    "contact_person_email":"admin@gmail.com"
+  }
+}

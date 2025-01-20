@@ -1,0 +1,60 @@
+meta {
+  name: blackbox 2
+  type: http
+  seq: 16
+}
+
+post {
+  url: https://www.blackbox.ai/api/chat
+  body: json
+  auth: none
+}
+
+headers {
+  accept: */*
+  accept-language: en-US,en;q=0.9,uz;q=0.8,ru;q=0.7
+  content-type: application/json
+  cookie: sessionId=d188c406-102f-484c-9f96-4d5698178c5e; __Host-authjs.csrf-token=d4b68d6e4410716479367be6bec396b4a8e78150adb0f5d9561f2efeb6cc02d2%7Caba1acdea220f68c8fcb7369c4e655031bdf956d1880adafc2d356ada42b6358; __Secure-authjs.callback-url=https%3A%2F%2Fwww.blackbox.ai
+  origin: https://www.blackbox.ai
+  ~priority: u=1, i
+  ~referer: https://www.blackbox.ai/
+  ~sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
+  ~sec-ch-ua-mobile: ?0
+  ~sec-ch-ua-platform: "Linux"
+  ~sec-fetch-dest: empty
+  ~sec-fetch-mode: cors
+  ~sec-fetch-site: same-origin
+  ~user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+}
+
+body:json {
+  {
+    "messages": [
+      {
+        "content": "Manabunga o'zbekcha git commit yozib ber iloji boricha qisqa bo'lsin index e39cb2c..5fa41be 100644\n--- a/urls.py\n+++ b/urls.py\n@@ -1,3 +1,9 @@\n-from django.urls import path\n+from django.urls import path, include\n+from rest_framework.routers import DefaultRouter\n \n-urlpatterns = []\n+router = DefaultRouter()\n+\n+\n+urlpatterns = [\n+    path(\"\", include(router.urls)),\n+]",
+        "role": "user"
+      }
+    ],
+    "previewToken": null,
+    "userId": null,
+    "codeModelMode": true,
+    "agentMode": {},
+    "trendingAgentMode": {},
+    "isMicMode": false,
+    "userSystemPrompt": null,
+    "maxTokens": 1024,
+    "playgroundTopP": 0.9,
+    "playgroundTemperature": 0.5,
+    "isChromeExt": false,
+    "githubToken": "",
+    "clickedAnswer2": false,
+    "clickedAnswer3": false,
+    "clickedForceWebSearch": false,
+    "visitFromDelta": false,
+    "mobileClient": false,
+    "userSelectedModel": null,
+    "validated": "00f37b34-a166-4efb-bce5-1312d87f2f94",
+    "imageGenerationMode": false,
+    "webSearchModePrompt": false
+  }
+}

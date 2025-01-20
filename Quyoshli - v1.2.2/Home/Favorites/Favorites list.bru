@@ -1,0 +1,19 @@
+meta {
+  name: Favorites list
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{domain}}/api/favorites
+  body: none
+  auth: bearer
+}
+
+headers {
+  Accept-Language: {{language}}
+}
+
+auth:bearer {
+  token: {{token}}
+}

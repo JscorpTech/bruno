@@ -1,0 +1,30 @@
+meta {
+  name: chatGroupDeleteMessageCreate
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/chat/group/:id/delete-message/:messageId/
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 
+  messageId: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "id": "",
+    "name": "",
+    "is_public": "",
+    "image": "",
+    "chat_type": ""
+  }
+}

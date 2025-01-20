@@ -1,0 +1,39 @@
+meta {
+  name: educationTutorialCreateTest
+  type: http
+  seq: 14
+}
+
+post {
+  url: {{baseUrl}}/education/tutorial/1/create-test/
+  body: json
+  auth: bearer
+}
+
+params:query {
+  ~search: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "topic_uz": "Test topic",
+    "desc_uz": "Slaom",
+    "time": 100,
+    "questions": [
+      {
+        "question_uz": "Test",
+        "variants": [
+          {
+            "is_true": true,
+            "variant_uz": 1,
+            "bal": 10
+          }
+        ]
+      }
+    ]
+  }
+}

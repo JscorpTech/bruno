@@ -1,0 +1,15 @@
+meta {
+  name: completed
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/education/tutorial/completed/
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

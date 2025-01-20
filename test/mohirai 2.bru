@@ -1,0 +1,36 @@
+meta {
+  name: mohirai 2
+  type: http
+  seq: 15
+}
+
+post {
+  url: https://uzbekvoice.ai/api/v1/tts
+  body: json
+  auth: none
+}
+
+headers {
+  accept: application/json, text/plain, */*
+  accept-language: en-US,en;q=0.9,uz;q=0.8,ru;q=0.7
+  content-type: application/json
+  cookie: _ym_uid=1732515762254879428; _ym_d=1732515762; _ym_isad=1; _ym_visorc=w; _gid=GA1.2.1970261056.1732515762; session=.eJwlzkkKAjEQAMC_5OxAppPe_Ix0ekGvo57EvzvgAwrq02515PPerq_jnZd2e0S7tmTNaZ0GKKEvogzqOAK1Shl2JpNAAdBuyH1Eivny3iM0Ak-OFcvVMtI9oQbISSYsAR-5aMpcWFSZNrsYukAVpTG7Ikc7I-9nHv9NUBFPr40AaJuMtFl536B2B_GxT9P2_QFQlznW.Z0Qd0w.BUDBH7lHZ003T3c5fRqh-UxjiYE; _ga=GA1.2.818243423.1732515762; _ga_1J6TP258EY=GS1.1.1732515761.1.1.1732517386.0.0.0
+  origin: https://uzbekvoice.ai
+  priority: u=1, i
+  referer: https://uzbekvoice.ai/videos/playground
+  sec-ch-ua: "Google Chrome";v="131", "Chromium";v="131", "Not_A Brand";v="24"
+  sec-ch-ua-mobile: ?0
+  sec-ch-ua-platform: "Linux"
+  sec-fetch-dest: empty
+  sec-fetch-mode: cors
+  sec-fetch-site: same-origin
+  user-agent: Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36
+}
+
+body:json {
+  {
+    "text": "salom",
+    "model": "davron-neutral",
+    "blocking": "false"
+  }
+}

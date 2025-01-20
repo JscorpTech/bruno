@@ -1,0 +1,19 @@
+meta {
+  name: Partner Requests list
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{domain}}/api/user/requests/partner?page=1
+  body: none
+  auth: bearer
+}
+
+params:query {
+  page: 1
+}
+
+auth:bearer {
+  token: {{token}}
+}

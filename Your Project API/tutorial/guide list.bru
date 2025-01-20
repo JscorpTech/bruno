@@ -1,0 +1,15 @@
+meta {
+  name: guide list
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{baseUrl}}/education/guide/
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

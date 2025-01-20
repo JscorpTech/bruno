@@ -1,0 +1,23 @@
+meta {
+  name: newsPostRetrieve
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/news/post/:id/
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 9
+}
+
+headers {
+  Accept-Language: kril
+}
+
+auth:bearer {
+  token: {{token}}
+}

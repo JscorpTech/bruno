@@ -1,0 +1,19 @@
+meta {
+  name: pre-apply
+  type: http
+  seq: 3
+}
+
+post {
+  url: https://api.shox.uz/payment/atmospay/pre-apply
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "card":"8600332914249390",
+    "expiry": "2509",
+    "transaction_id": "1"
+  }
+}

@@ -1,0 +1,27 @@
+meta {
+  name: educationGuideCreate
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{baseUrl}}/education/guide/
+  body: multipartForm
+  auth: bearer
+}
+
+params:query {
+  ~guide_type: 
+  ~page: 
+  ~page_size: 
+  ~search: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:multipart-form {
+  guide_type: lawyer
+  image: @file(/home/user/Pictures/Screenshots/Screenshot from 2025-01-13 15-19-50.png)
+}

@@ -1,0 +1,29 @@
+meta {
+  name: CheckPerformTransaction
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{domain}}/payment/payme/merchant/
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: Basic {{token}}
+}
+
+body:json {
+  {
+    "jsonrpc": "2.0",
+    "id": 165459,
+    "method": "CheckPerformTransaction",
+    "params": {
+      "amount": 15000,
+      "account": {
+        "order_id": "100018"
+      }
+    }
+  }
+}

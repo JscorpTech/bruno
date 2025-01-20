@@ -1,0 +1,15 @@
+meta {
+  name: districts_list
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/districts/
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

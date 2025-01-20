@@ -1,0 +1,26 @@
+meta {
+  name: Store Device info
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{domain}}/api/device
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "device_id": "AB1234CD-E123-12FG-J123",
+    "device_name": "Samsung Galaxy S24 A2404",
+    "device_token": "firebase_token",
+    "device_type": "android"
+  }
+}
+
+tests {
+  // var jsonData = JSON.parse(responseBody);
+  // var local_token = jsonData.data;
+  // bru.setVar('local_token', local_token);
+}

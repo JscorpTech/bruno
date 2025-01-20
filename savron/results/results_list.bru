@@ -1,0 +1,19 @@
+meta {
+  name: results_list
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/results/
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~page: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

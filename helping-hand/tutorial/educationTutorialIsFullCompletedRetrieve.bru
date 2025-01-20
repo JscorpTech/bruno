@@ -1,0 +1,19 @@
+meta {
+  name: educationTutorialIsFullCompletedRetrieve
+  type: http
+  seq: 12
+}
+
+get {
+  url: {{baseUrl}}/education/tutorial/is-full-completed/
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~search: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

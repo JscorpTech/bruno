@@ -1,0 +1,22 @@
+meta {
+  name: auth_reset_confirm_create
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{baseUrl}}/auth/reset/confirm/
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "code": "",
+    "phone": ""
+  }
+}

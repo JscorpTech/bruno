@@ -1,0 +1,32 @@
+meta {
+  name: CreateTransaction
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{domain}}/payment/payme/merchant/
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: Basic {{token}}
+}
+
+body:json {
+  {
+      "jsonrpc": "2.0",
+      "id": 162650,
+      "method": "CreateTransaction",
+      "params": {
+          "account": {
+              "order_id": "5"
+          },
+          "amount": 1000,
+          "id": "673e35c13c36bef9a1918ab4",
+          "time": 1731927958677
+      }
+  }
+  
+}

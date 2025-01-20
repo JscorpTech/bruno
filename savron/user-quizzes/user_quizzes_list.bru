@@ -1,0 +1,19 @@
+meta {
+  name: user_quizzes_list
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/user-quizzes/
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~page: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

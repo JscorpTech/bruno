@@ -1,0 +1,30 @@
+meta {
+  name: auth
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{domain}}/token
+  body: formUrlEncoded
+  auth: basic
+}
+
+auth:basic {
+  username: oT5W50xEtnpxSHW1MK8JTXpGROoa
+  password: ErQBePf25GLahB6N_iqz3d9o3rca
+}
+
+body:json {
+  {
+    "grant_type": "sd"
+  }
+}
+
+body:form-urlencoded {
+  grant_type: client_credentials
+}
+
+script:post-response {
+  bru.setEnvVar("token", res.body.access_token)
+}

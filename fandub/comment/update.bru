@@ -1,0 +1,17 @@
+meta {
+  name: update
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{domain}}/api/comment/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "text": "Salom"
+  }
+}

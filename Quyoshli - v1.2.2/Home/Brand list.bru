@@ -1,0 +1,20 @@
+meta {
+  name: Brand list
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{domain}}/api/brands?page=1&limit=10
+  body: none
+  auth: none
+}
+
+params:query {
+  page: 1
+  limit: 10
+}
+
+headers {
+  Accept-Language: {{language}}
+}

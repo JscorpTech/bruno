@@ -1,0 +1,15 @@
+meta {
+  name: about_us_retrieve
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/about-us/
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

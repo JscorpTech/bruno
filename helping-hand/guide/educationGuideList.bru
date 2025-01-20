@@ -1,0 +1,22 @@
+meta {
+  name: educationGuideList
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/education/guide/
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~guide_type: 
+  ~page: 
+  ~page_size: 
+  ~search: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

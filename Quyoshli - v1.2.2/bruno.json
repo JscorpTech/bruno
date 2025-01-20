@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "Quyoshli - v1.2.2",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

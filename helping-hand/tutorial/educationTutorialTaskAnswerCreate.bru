@@ -1,0 +1,30 @@
+meta {
+  name: educationTutorialTaskAnswerCreate
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{baseUrl}}/education/tutorial/:id/task-answer/
+  body: json
+  auth: bearer
+}
+
+params:query {
+  ~search: 
+}
+
+params:path {
+  id: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "answer": "",
+    "file": ""
+  }
+}

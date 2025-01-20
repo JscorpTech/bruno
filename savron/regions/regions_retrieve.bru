@@ -1,0 +1,19 @@
+meta {
+  name: regions_retrieve
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/regions/:id/
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

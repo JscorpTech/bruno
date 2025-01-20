@@ -1,0 +1,33 @@
+meta {
+  name: create
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{domain}}/api/checkout/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "type": "ready_solutions",
+    "delivery_type": "pickup",
+    "with_installation": true,
+    "client_type": "physical",
+    "payment_type": "cash",
+    "branch_id": 1,
+    "client_information": {
+      "full_name": "Azamov Samandar",
+      "jshir": 12345678901234,
+      "series": "AD1555325"
+    },
+    "products": [
+      {
+        "id": 1,
+        "count": 1
+      }
+    ]
+  }
+}

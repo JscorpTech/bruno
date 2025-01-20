@@ -1,0 +1,19 @@
+meta {
+  name: - minus Product Cart
+  type: http
+  seq: 5
+}
+
+put {
+  url: {{domain}}/api/cart/1/decrease
+  body: none
+  auth: bearer
+}
+
+headers {
+  ~X-Application-token: 123
+}
+
+auth:bearer {
+  token: {{token}}
+}

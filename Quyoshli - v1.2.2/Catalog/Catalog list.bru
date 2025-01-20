@@ -1,0 +1,15 @@
+meta {
+  name: Catalog list
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{domain}}/api/categories
+  body: none
+  auth: none
+}
+
+headers {
+  Accept-Language: {{language}}
+}

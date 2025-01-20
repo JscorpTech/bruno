@@ -1,0 +1,19 @@
+meta {
+  name: order_history_list
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/order-history/
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~page: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

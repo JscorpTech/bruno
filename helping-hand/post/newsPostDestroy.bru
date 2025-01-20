@@ -1,0 +1,19 @@
+meta {
+  name: newsPostDestroy
+  type: http
+  seq: 6
+}
+
+delete {
+  url: {{baseUrl}}/news/post/:id/
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

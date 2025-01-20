@@ -1,0 +1,19 @@
+meta {
+  name: notifications_mark_read_create
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/notifications/mark-read/:notification_id/
+  body: none
+  auth: bearer
+}
+
+params:path {
+  notification_id: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,28 @@
+meta {
+  name: chatGroupUpdateMessageCreate
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseUrl}}/chat/group/:id/update-message/:messageId/
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 
+  messageId: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "text": "",
+    "file": "",
+    "file_type": ""
+  }
+}

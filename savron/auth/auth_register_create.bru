@@ -1,0 +1,22 @@
+meta {
+  name: auth_register_create
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseUrl}}/auth/register/
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "first_name": "Samandar",
+    "last_name": "Azamov",
+    "phone": "998888112309",
+    "password": "Samandar001@",
+    "region": 1,
+    "district": 1
+  }
+}

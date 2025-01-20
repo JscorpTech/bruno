@@ -1,0 +1,18 @@
+meta {
+  name: authTokenRefreshCreate
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/auth/token/refresh/
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "access": "",
+    "refresh": ""
+  }
+}

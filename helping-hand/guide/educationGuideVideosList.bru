@@ -1,0 +1,22 @@
+meta {
+  name: educationGuideVideosList
+  type: http
+  seq: 4
+}
+
+get {
+  url: {{baseUrl}}/education/guide/videos/
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~guide_type: 
+  ~page: 
+  ~page_size: 
+  ~search: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

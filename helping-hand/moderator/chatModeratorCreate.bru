@@ -1,0 +1,31 @@
+meta {
+  name: chatModeratorCreate
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/chat/moderator/
+  body: json
+  auth: bearer
+}
+
+params:query {
+  ~role: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "first_name": "Samandar",
+    "last_name": "Azamov",
+    "phone": "998888112302",
+    "password": "Samandar001@",
+    "level": "1",
+    "experience": "1",
+    "role": "lawyer"
+  }
+}

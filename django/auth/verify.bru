@@ -1,0 +1,18 @@
+meta {
+  name: verify
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{domain}}/auth/confirm/
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "phone": "998888112308",
+    "code": 1111
+  }
+}

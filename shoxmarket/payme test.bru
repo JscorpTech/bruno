@@ -1,0 +1,29 @@
+meta {
+  name: payme test
+  type: http
+  seq: 7
+}
+
+post {
+  url: http://127.0.0.1:8081/payment/payme/
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: Basic UGF5Y29tOkBzJktlRFh0TjRiZ0FHUnpHSmU1UnZ4M0M4a2FnMnBpWFVyQA==
+}
+
+body:json {
+  {
+    "jsonrpc": "2.0",
+    "id": 160902,
+    "method": "CheckPerformTransaction",
+    "params": {
+      "amount": 1500000,
+      "account": {
+        "order_id": "100025"
+      }
+    }
+  }
+}

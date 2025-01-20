@@ -1,0 +1,19 @@
+meta {
+  name: educationGuideRetrieve
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{baseUrl}}/education/guide/:id/
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{token}}
+}

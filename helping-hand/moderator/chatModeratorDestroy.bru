@@ -1,0 +1,31 @@
+meta {
+  name: chatModeratorDestroy
+  type: http
+  seq: 5
+}
+
+delete {
+  url: {{baseUrl}}/chat/moderator/20/
+  body: json
+  auth: bearer
+}
+
+params:query {
+  ~role: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "first_name": "Samandar 1",
+    "last_name": "Azamov",
+    "phone": "998888112302",
+    "password": "2309",
+    "level": "1",
+    "experience": "1 22",
+    "role": "lawyer"
+  }
+}

@@ -1,0 +1,19 @@
+meta {
+  name: chat_group_get_messages_retrieve
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{baseUrl}}/chat/group/:id/get-messages/
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{token}}
+}

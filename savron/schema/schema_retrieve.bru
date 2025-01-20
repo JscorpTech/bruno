@@ -1,0 +1,20 @@
+meta {
+  name: schema_retrieve
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/schema/
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~format: 
+  ~lang: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

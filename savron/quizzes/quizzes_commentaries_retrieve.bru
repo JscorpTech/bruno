@@ -1,0 +1,20 @@
+meta {
+  name: quizzes_commentaries_retrieve
+  type: http
+  seq: 5
+}
+
+get {
+  url: {{baseUrl}}/quizzes/:quiz_pk/commentaries/:id/
+  body: none
+  auth: bearer
+}
+
+params:path {
+  id: 
+  quiz_pk: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,23 @@
+meta {
+  name: auth_me_update_update
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{baseUrl}}/auth/me/update/
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "first_name": "",
+    "last_name": "",
+    "phone": ""
+  }
+}

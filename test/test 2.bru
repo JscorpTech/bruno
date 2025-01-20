@@ -1,0 +1,16 @@
+meta {
+  name: test 2
+  type: http
+  seq: 7
+}
+
+post {
+  url: http://127.0.0.1:8083/upload
+  body: multipartForm
+  auth: none
+}
+
+body:multipart-form {
+  file: @file(/home/user/Downloads/images.jpeg)
+  name: Elon musk
+}

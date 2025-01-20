@@ -1,0 +1,19 @@
+meta {
+  name: chatModeratorList
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/chat/moderator/
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~role: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

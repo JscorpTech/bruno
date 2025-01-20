@@ -1,0 +1,24 @@
+meta {
+  name: UserMe update
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{domain}}/api/user/me
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+      "first_name": "Samandar",
+      "last_name": "Azamov",
+      "middle_name": "Otabek o'g'li",
+      "gender": false
+  }
+}

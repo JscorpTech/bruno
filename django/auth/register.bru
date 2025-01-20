@@ -1,0 +1,20 @@
+meta {
+  name: register
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{domain}}/auth/register/
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "first_name": "Samandar",
+    "last_name": "Azamov",
+    "phone": "998888112308",
+    "password": "Samandar001@"
+  }
+}

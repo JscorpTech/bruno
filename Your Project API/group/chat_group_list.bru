@@ -1,0 +1,20 @@
+meta {
+  name: chat_group_list
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/chat/group/
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~page: 
+  ~page_size: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

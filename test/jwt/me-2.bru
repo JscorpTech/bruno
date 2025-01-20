@@ -1,0 +1,22 @@
+meta {
+  name: me-2
+  type: http
+  seq: 3
+}
+
+get {
+  url: http://127.0.0.1:8082/auth/me/
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI5Njg4MzIxLCJpYXQiOjE3Mjk2ODgwMjEsImp0aSI6IjhlN2QzOTBmNmI5YzQ5MzJiY2RjNzc3ZTE2NzA3M2JiIiwidXNlcl9pZCI6MX0.4xOP-R6ly89xXq7dUk4RFzWS-sWib-0glx0COq8SpXE
+}
+
+body:json {
+  {
+    "phone":"998888112309",
+    "password":"2309"
+  }
+}

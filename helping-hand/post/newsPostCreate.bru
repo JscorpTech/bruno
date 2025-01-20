@@ -1,0 +1,28 @@
+meta {
+  name: newsPostCreate
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/news/post/
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "title": "Salom",
+    "content": "salom"
+  }
+}
+
+body:multipart-form {
+  title_uz: salom
+  title_kaa: salom kaa
+  image: @file(/home/user/Pictures/Screenshots/Screenshot from 2024-12-23 14-03-58.png)
+}

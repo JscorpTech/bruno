@@ -1,0 +1,32 @@
+meta {
+  name: educationTutorialUpdateTest
+  type: http
+  seq: 15
+}
+
+patch {
+  url: {{baseUrl}}/education/tutorial/32/update-question/
+  body: json
+  auth: bearer
+}
+
+params:query {
+  ~search: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "question_uz": "Test updated",
+    "variants": [
+      {
+        "is_true": true,
+        "variant_uz": "uzbek variant",
+        "bal": 10
+      }
+    ]
+  }
+}

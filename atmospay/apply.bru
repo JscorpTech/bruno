@@ -1,0 +1,23 @@
+meta {
+  name: apply
+  type: http
+  seq: 7
+}
+
+post {
+  url: https://partner.atmos.uz/merchant/pay/apply-ofd
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+      "transaction_id": {{transaction_id}},
+      "otp": 111111,
+      "store_id": {{store_id}}
+  }
+}
+
+script:post-response {
+  bru.setEnvVar("cart_token",res.body.card_token)
+}

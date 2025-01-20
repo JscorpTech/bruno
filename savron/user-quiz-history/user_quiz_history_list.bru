@@ -1,0 +1,19 @@
+meta {
+  name: user_quiz_history_list
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/user-quiz-history/:quiz_id/
+  body: none
+  auth: bearer
+}
+
+params:path {
+  quiz_id: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

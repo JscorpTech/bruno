@@ -1,0 +1,23 @@
+meta {
+  name: authbot
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{BASE_URL}}/authbot/login/
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "code":"121212"
+  }
+}
+
+script:post-response {
+  if (res.body.access){
+    bru.setEnvVar("TOKEN",res.body.access)
+  }
+}

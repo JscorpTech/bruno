@@ -1,0 +1,21 @@
+meta {
+  name: newsPostListTop
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{baseUrl}}/news/post/top-list/?news_type=business
+  body: none
+  auth: bearer
+}
+
+params:query {
+  news_type: business
+  ~page: 
+  ~page_size: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

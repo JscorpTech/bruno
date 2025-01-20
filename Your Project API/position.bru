@@ -1,0 +1,19 @@
+meta {
+  name: position
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://127.0.0.1:8082/sos/positon/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "long": 69.274829,
+    "lat": 41.327002
+  }
+  
+}

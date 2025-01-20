@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "uzfilm",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

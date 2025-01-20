@@ -1,0 +1,22 @@
+meta {
+  name: authUserUpdatePartialUpdate
+  type: http
+  seq: 3
+}
+
+patch {
+  url: {{baseUrl}}/auth/user-update/
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "first_name": "",
+    "last_name": ""
+  }
+}

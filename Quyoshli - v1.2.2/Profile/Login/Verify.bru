@@ -1,0 +1,29 @@
+meta {
+  name: Verify
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{domain}}/api/oauth/verify/
+  body: json
+  auth: none
+}
+
+headers {
+  Accept-Language: {{language}}
+  X-Application-Token: {{local_token}}
+}
+
+body:json {
+  {
+      "phone": 998943990509,
+      "verify_code": 86506
+  }
+}
+
+tests {
+  // var jsonData = JSON.parse(responseBody);
+  // var token = jsonData.data.access_token;
+  // bru.setVar('token', token);
+}

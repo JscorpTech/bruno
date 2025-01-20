@@ -1,0 +1,18 @@
+meta {
+  name: bind confirm
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{domain}}/partner/bind-card/confirm
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "transaction_id":{{transaction_id}},
+    "otp":"111111"
+  }
+}

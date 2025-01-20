@@ -1,0 +1,31 @@
+meta {
+  name: Store service
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{domain}}/api/services
+  body: json
+  auth: bearer
+}
+
+headers {
+  X-Requested-With: XMLHttpRequest
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+      "service_id": 1,
+      "power_id": 1,
+      "city_id": 1,
+      "comment": "Tezroq kerak",
+      "phone": "998913333111",
+      "full_name": "Tukhtaev U.T",
+      "problem_id": 1
+  }
+}

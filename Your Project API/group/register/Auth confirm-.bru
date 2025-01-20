@@ -1,0 +1,22 @@
+meta {
+  name: Auth confirm-
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/auth/confirm/
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "code": "1111",
+    "phone": "998888112308"
+  }
+}

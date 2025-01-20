@@ -1,0 +1,31 @@
+meta {
+  name: webhook
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{domain}}/position/webhook?lt=41.355839&ln=69.308838&touch=1&imn=321&srn=123&batt=100&battstatus=0&sputnik=0
+  body: json
+  auth: none
+}
+
+params:query {
+  lt: 41.355839
+  ln: 69.308838
+  touch: 1
+  imn: 321
+  srn: 123
+  batt: 100
+  battstatus: 0
+  sputnik: 0
+}
+
+body:json {
+  {
+    "bracelet": 1,
+    "long": 1,
+    "lat": 1,
+    "battery": 100
+  }
+}

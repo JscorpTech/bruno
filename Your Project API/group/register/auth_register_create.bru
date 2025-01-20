@@ -1,0 +1,24 @@
+meta {
+  name: auth_register_create
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/auth/register/
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "first_name": "Samandar",
+    "last_name": "Azamov",
+    "phone": "998888112308",
+    "password": "2309"
+  }
+}

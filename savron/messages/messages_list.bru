@@ -1,0 +1,19 @@
+meta {
+  name: messages_list
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/messages/
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~page: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

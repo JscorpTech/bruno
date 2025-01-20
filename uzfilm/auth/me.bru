@@ -1,0 +1,23 @@
+meta {
+  name: me
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{BASE_URL}}/auth/me/
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "code":"121212"
+  }
+}
+
+script:post-response {
+  if (res.body.access){
+    bru.setEnvVar("TOKEN",res.body.access)
+  }
+}

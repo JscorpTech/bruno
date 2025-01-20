@@ -1,0 +1,19 @@
+meta {
+  name: - add Product Cart
+  type: http
+  seq: 4
+}
+
+put {
+  url: {{domain}}/api/cart/3/add
+  body: none
+  auth: bearer
+}
+
+headers {
+  ~X-Application-token: 123
+}
+
+auth:bearer {
+  token: {{token}}
+}

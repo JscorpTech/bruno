@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "jscorptech/payme",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

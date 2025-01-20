@@ -1,0 +1,28 @@
+meta {
+  name: exam answer
+  type: http
+  seq: 10
+}
+
+post {
+  url: {{baseUrl}}/education/exam-answer/
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  [
+    {
+      "question": 1,
+      "variant": [1]
+    },   
+    {
+      "question": 2,
+      "variant": [4]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+meta {
+  name: apply
+  type: http
+  seq: 2
+}
+
+post {
+  url: https://api.shox.uz/payment/atmospay/apply
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "code":"111111",
+    "transaction_id": "1"
+  }
+}

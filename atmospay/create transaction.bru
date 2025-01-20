@@ -1,0 +1,24 @@
+meta {
+  name: create transaction
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{domain}}/merchant/pay/create
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "amount": 5000000,
+    "account": "12345",
+    "store_id": "{{store_id}}",
+    "lang": "uz"
+  }
+}
+
+script:post-response {
+  bru.setEnvVar("transaction_id",res.body.transaction_id)
+}

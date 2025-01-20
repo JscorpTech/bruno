@@ -1,0 +1,49 @@
+meta {
+  name: blackbox
+  type: http
+  seq: 9
+}
+
+post {
+  url: https://www.blackbox.ai/api/chat
+  body: json
+  auth: none
+}
+
+headers {
+  accept: */*
+  accept-language: uz,en-US;q=0.9,en;q=0.8,ru;q=0.7
+  content-type: application/json
+  priority: u=1, i
+}
+
+body:json {
+  {
+    "messages": [
+      {
+        "role": "user",
+        "content": "menga 2 ta tasodifiy so'z ayt"
+      }
+    ],
+    "previewToken": null,
+    "userId": null,
+    "codeModelMode": true,
+    "agentMode": {},
+    "trendingAgentMode": {},
+    "isMicMode": false,
+    "userSystemPrompt": null,
+    "maxTokens": 1024,
+    "playgroundTopP": 0.9,
+    "playgroundTemperature": 0.5,
+    "isChromeExt": false,
+    "githubToken": "",
+    "clickedAnswer2": false,
+    "clickedAnswer3": false,
+    "clickedForceWebSearch": false,
+    "visitFromDelta": false,
+    "mobileClient": false,
+    "validated": "00f37b34-a166-4efb-bce5-1312d87f2f94",
+    "userSelectedModel": null
+    
+  }
+}

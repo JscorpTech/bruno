@@ -1,0 +1,15 @@
+meta {
+  name: apiV1ContentsCategoryCreate
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/api/v1/contents/category/
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

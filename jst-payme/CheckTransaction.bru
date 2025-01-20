@@ -1,0 +1,27 @@
+meta {
+  name: CheckTransaction
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{domain}}/payment/payme/merchant/
+  body: json
+  auth: none
+}
+
+headers {
+  Authorization: Basic {{token}}
+}
+
+body:json {
+  {
+      "jsonrpc": "2.0",
+      "id": 166204,
+      "method": "CheckTransaction",
+      "params": {
+          "id": "673e35c13c36bef9a1918ab4"
+      }
+  }
+  
+}

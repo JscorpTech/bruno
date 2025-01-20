@@ -1,0 +1,15 @@
+meta {
+  name: apiV2BannerList
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/v2/banner/
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

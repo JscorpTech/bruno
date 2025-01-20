@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "atmospay",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

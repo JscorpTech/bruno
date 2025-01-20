@@ -1,0 +1,19 @@
+meta {
+  name: additions_list
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/additions/
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~page: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

@@ -1,0 +1,15 @@
+meta {
+  name: get list
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{domain}}/api/partners
+  body: none
+  auth: none
+}
+
+headers {
+  Accept-Language: {{language}}
+}

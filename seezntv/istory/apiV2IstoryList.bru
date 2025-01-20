@@ -1,0 +1,15 @@
+meta {
+  name: apiV2IstoryList
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/v2/istory/
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

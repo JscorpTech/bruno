@@ -1,0 +1,15 @@
+meta {
+  name: apiV2GenreList
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/v2/genre/
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

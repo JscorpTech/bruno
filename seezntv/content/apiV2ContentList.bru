@@ -1,0 +1,24 @@
+meta {
+  name: apiV2ContentList
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/v2/content/
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~category: 
+  ~genre: 
+  ~page: 
+  ~page_size: 
+  ~search: 
+  ~tags: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

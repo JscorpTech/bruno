@@ -1,0 +1,23 @@
+meta {
+  name: posts_create
+  type: http
+  seq: 2
+}
+
+post {
+  url: {{baseUrl}}/posts/
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "title": "",
+    "desc": "",
+    "image": ""
+  }
+}

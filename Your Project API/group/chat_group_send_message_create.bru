@@ -1,0 +1,26 @@
+meta {
+  name: chat_group_send_message_create
+  type: http
+  seq: 4
+}
+
+post {
+  url: {{baseUrl}}/chat/group/:id/send-message/
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "text": "salom",
+    "file_type": "audio"
+  }
+}

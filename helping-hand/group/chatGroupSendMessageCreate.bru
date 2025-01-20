@@ -1,0 +1,26 @@
+meta {
+  name: chatGroupSendMessageCreate
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{baseUrl}}/chat/group/:id/send-message/
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 22
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "text": "salom bratishka",
+    "file_type": "text"
+  }
+}

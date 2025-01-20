@@ -1,0 +1,19 @@
+meta {
+  name: posts_list
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/posts/
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~page: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

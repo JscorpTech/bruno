@@ -1,0 +1,21 @@
+meta {
+  name: authUserUpdateUpdate
+  type: http
+  seq: 2
+}
+
+put {
+  url: {{baseUrl}}/auth/user-update/
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "experience": [1]
+  }
+}

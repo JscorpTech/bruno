@@ -1,0 +1,15 @@
+meta {
+  name: get Regions
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{domain}}/api/regions
+  body: none
+  auth: none
+}
+
+headers {
+  Accept-Language: {{language}}
+}

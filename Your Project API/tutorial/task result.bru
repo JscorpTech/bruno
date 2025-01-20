@@ -1,0 +1,19 @@
+meta {
+  name: task result
+  type: http
+  seq: 9
+}
+
+post {
+  url: {{baseUrl}}/education/tutorial/2/task-answer/
+  body: multipartForm
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:multipart-form {
+  file: @file(/home/user/Pictures/Screenshots/Screenshot from 2024-12-28 16-26-00.png)
+}

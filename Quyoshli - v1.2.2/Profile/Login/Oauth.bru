@@ -1,0 +1,21 @@
+meta {
+  name: Oauth
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{domain}}/api/oauth
+  body: json
+  auth: none
+}
+
+headers {
+  Accept-Language: {{language}}
+}
+
+body:json {
+  {
+      "phone": 998943990509
+  }
+}

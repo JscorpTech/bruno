@@ -1,0 +1,26 @@
+meta {
+  name: edit message
+  type: http
+  seq: 6
+}
+
+post {
+  url: {{baseUrl}}/chat/group/:id/update-message/27/
+  body: json
+  auth: bearer
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "text": "qalay bratishka",
+    "file_type": "text"
+  }
+}

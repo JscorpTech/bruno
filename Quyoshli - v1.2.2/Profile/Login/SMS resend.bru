@@ -1,0 +1,21 @@
+meta {
+  name: SMS resend
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{domain}}/api/oauth/resend
+  body: json
+  auth: none
+}
+
+headers {
+  Accept-Language: {{language}}
+}
+
+body:json {
+  {
+      "phone": 998913333111
+  }
+}

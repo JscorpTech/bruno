@@ -1,0 +1,23 @@
+meta {
+  name: Product list - from Catalog
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{domain}}/api/categories/117/products
+  body: none
+  auth: none
+}
+
+params:query {
+  ~page: 1
+  ~sort_by: popular
+  ~brand_id: {{brand_id}}
+  ~price_from: 1000
+  ~price_to: 2000
+}
+
+headers {
+  Accept-Language: {{language}}
+}

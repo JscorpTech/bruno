@@ -1,0 +1,23 @@
+meta {
+  name: educationTutorialTaskRetrieve
+  type: http
+  seq: 7
+}
+
+get {
+  url: {{baseUrl}}/education/tutorial/:id/task/
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~search: 
+}
+
+params:path {
+  id: 1
+}
+
+auth:bearer {
+  token: {{token}}
+}

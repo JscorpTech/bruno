@@ -1,0 +1,31 @@
+meta {
+  name: Installation Price
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{domain}}/api/checkout/delivery-price
+  body: json
+  auth: bearer
+}
+
+headers {
+  X-Requested-With: XMLHttpRequest
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+      "city_id": 1,
+      "products": [
+          {
+              "id": 1,
+              "count": 1
+          }
+      ]
+  }
+}

@@ -1,0 +1,15 @@
+meta {
+  name: check_quiz_create
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}/check-quiz/
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

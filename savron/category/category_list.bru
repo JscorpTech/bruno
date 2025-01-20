@@ -1,0 +1,20 @@
+meta {
+  name: category_list
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/category/
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~page: 
+  ~search: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

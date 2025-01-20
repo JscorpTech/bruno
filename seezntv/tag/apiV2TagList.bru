@@ -1,0 +1,15 @@
+meta {
+  name: apiV2TagList
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/v2/tag/
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}

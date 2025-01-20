@@ -1,0 +1,35 @@
+meta {
+  name: chatGroupCreate
+  type: http
+  seq: 10
+}
+
+post {
+  url: {{baseUrl}}/chat/group/
+  body: multipartForm
+  auth: bearer
+}
+
+params:query {
+  ~chat_type: 
+  ~is_public: 
+  ~page: 
+  ~page_size: 
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+body:json {
+  {
+    "name": "Salom",
+    "image": 
+  }
+}
+
+body:multipart-form {
+  chat_type: lawyer
+  name: Test
+  image: @file(/home/user/Pictures/Screenshots/Screenshot from 2025-01-18 13-53-02.png)
+}

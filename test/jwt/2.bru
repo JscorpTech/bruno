@@ -1,0 +1,18 @@
+meta {
+  name: 2
+  type: http
+  seq: 2
+}
+
+post {
+  url: http://127.0.0.1:8081/auth/token/
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "phone":"998888112309",
+    "password":"2309"
+  }
+}

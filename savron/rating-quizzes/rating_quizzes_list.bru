@@ -1,0 +1,19 @@
+meta {
+  name: rating_quizzes_list
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/rating-quizzes/
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~search: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

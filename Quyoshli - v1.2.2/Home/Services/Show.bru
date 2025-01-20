@@ -1,0 +1,15 @@
+meta {
+  name: Show
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{domain}}/api/services/1
+  body: none
+  auth: none
+}
+
+headers {
+  Accept-Language: {{language}}
+}

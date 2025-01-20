@@ -1,0 +1,23 @@
+meta {
+  name: educationTutorialDestroy
+  type: http
+  seq: 6
+}
+
+delete {
+  url: {{baseUrl}}/education/tutorial/:id/
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~search: 
+}
+
+params:path {
+  id: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

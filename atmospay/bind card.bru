@@ -1,0 +1,22 @@
+meta {
+  name: bind card
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{domain}}/partner/bind-card/init
+  body: json
+  auth: inherit
+}
+
+body:json {
+  {
+    "card_number":{{card}},
+    "expiry":{{expiry}}
+  }
+}
+
+script:post-response {
+  bru.setEnvVar("transaction_id", res.body.transaction_id)
+}

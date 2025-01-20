@@ -1,0 +1,27 @@
+meta {
+  name: apiV1ContentsList
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/v1/contents/
+  body: none
+  auth: bearer
+}
+
+params:query {
+  ~age_limit__gte: 
+  ~age_limit__lte: 
+  ~category: 
+  ~genre: 
+  ~page: 
+  ~page_size: 
+  ~release_date__gte: 
+  ~release_date__lte: 
+  ~title__icontains: 
+}
+
+auth:bearer {
+  token: {{token}}
+}

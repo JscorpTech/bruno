@@ -1,0 +1,17 @@
+meta {
+  name: authTokenVerifyCreate
+  type: http
+  seq: 3
+}
+
+post {
+  url: {{baseUrl}}/auth/token/verify/
+  body: json
+  auth: none
+}
+
+body:json {
+  {
+    "token": ""
+  }
+}

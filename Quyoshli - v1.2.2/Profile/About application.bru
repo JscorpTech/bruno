@@ -1,0 +1,15 @@
+meta {
+  name: About application
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{domain}}/api/page/about
+  body: none
+  auth: none
+}
+
+headers {
+  Accept-Language: {{language}}
+}

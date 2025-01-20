@@ -1,0 +1,23 @@
+meta {
+  name: get categories
+  type: http
+  seq: 1
+}
+
+get {
+  url: http://127.0.0.1:8081/films/
+  body: none
+  auth: none
+}
+
+headers {
+  Accept: application/json, text/plain, */*
+  Accept-Language: en-US,en;q=0.9,uz;q=0.8,ru;q=0.7
+  Connection: keep-alive
+  Origin: http://127.0.0.1:8080
+  Referer: http://127.0.0.1:8080/
+  Sec-Fetch-Dest: empty
+  Sec-Fetch-Mode: cors
+  Sec-Fetch-Site: same-site
+  User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1
+}
